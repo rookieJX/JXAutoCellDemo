@@ -10,9 +10,9 @@
 #import "JXChatCell.h"
 #import "JXChatModel.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
-/** shuzu */
+/** 数据源数组 */
 @property (nonatomic,strong) NSMutableArray * chatArray;
-/** uita */
+/** UITableView */
 @property (nonatomic,weak) UITableView * tableView;
 @end
 
@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 数据
     NSArray * array = @[
                         @{
                            @"nickName":@"你成佛了",
@@ -174,7 +175,7 @@
                             }
                         ];
     
-    
+    // 将数据转换成模型
     for (NSDictionary * dict in array) {
         JXChatModel * model = [JXChatModel modelWithDict:dict];
         [self.chatArray addObject:model];
@@ -206,6 +207,7 @@
     return model.cellHeight;
 }
 
+// 先给cell表格一个预估计高度
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100;
 }

@@ -14,4 +14,8 @@
     [model setValuesForKeysWithDictionary:dict];
     return model;
 }
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    // 这里对没有定义的键值对不进行任何操作
+}
 @end

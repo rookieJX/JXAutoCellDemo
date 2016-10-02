@@ -17,6 +17,6 @@
 @property (nonatomic,copy) NSString * graide;
 /** 内容 */
 @property (nonatomic,copy) NSString * content;
-/** 高度 */
+/** 高度，用来存放计算后的cell高度 */
 @property (nonatomic,assign) CGFloat cellHeight;
 @end

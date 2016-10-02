@@ -11,7 +11,6 @@
 @class JXChatModel;
 
 @interface JXChatCell : UITableViewCell
-
 /** 模型 */
 @property (nonatomic,strong) JXChatModel * model;
 @end
